@@ -10,6 +10,16 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <style>
+      @media (max-width: 767px) {
+        .content-section {
+          display: none;
+        }
+        .content-section.active {
+          display: block;
+        }
+      }
+    </style>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -32,7 +42,42 @@
               <a class="nav-link" href="index.html">Hasiera</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="araudia.html">Araudia</a>
+              <a
+                class="nav-link d-none d-lg-block active"
+                aria-current="page"
+                href="araudia.html"
+                >Araudia</a
+              >
+              <!-- Mobileko submenua -->
+              <div class="d-lg-none">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Araudia
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="araudia.html#orokorra"
+                      >Araudi orokorra</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="araudia.html#iigradua"
+                      >II gradua</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="araudia.html#aagradua"
+                      >AA gradua</a
+                    >
+                  </li>
+                </ul>
+              </div>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="egutegia.html">Egutegia</a>
@@ -47,7 +92,49 @@
         </div>
       </div>
     </nav>
-    <h1>Araudia</h1>
+    <div class="container mt-4">
+      <h1>Araudia</h1>
+
+      <section id="orokorra" class="content-section active">
+        <h2>Araudi orokorra</h2>
+        <p>Araudi orokorraren edukia hemen...</p>
+      </section>
+
+      <section id="iigradua" class="content-section">
+        <h2>II gradua</h2>
+        <p>II graduaren edukia hemen...</p>
+      </section>
+
+      <section id="aagradua" class="content-section">
+        <h2>AA gradua</h2>
+        <p>AA graduaren edukia hemen...</p>
+      </section>
+    </div>
+    <script>
+      function showSection() {
+        if (window.innerWidth < 768) {
+          const hash = window.location.hash.substring(1) || "orokorra";
+
+          document.querySelectorAll(".content-section").forEach((section) => {
+            section.classList.remove("active");
+          });
+
+          const activeSection = document.getElementById(hash);
+          if (activeSection) {
+            activeSection.classList.add("active");
+          }
+
+          const navbarCollapse =
+            document.getElementsByClassName("navbar-collapse")[0];
+          if (navbarCollapse.classList.contains("show")) {
+            navbarCollapse.classList.remove("show");
+          }
+        }
+      }
+      showSection();
+
+      window.addEventListener("hashchange", showSection);
+    </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
