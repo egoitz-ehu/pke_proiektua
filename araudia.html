@@ -92,6 +92,23 @@
         </div>
       </div>
     </nav>
+
+    <div class="mobile-nav d-md-none">
+      <div class="container">
+        <ul class="nav nav-pills nav-fill">
+          <li class="nav-item">
+            <a class="nav-link active" href="#orokorra">Orokorra</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#iigradua">II gradua</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#aagradua">AA gradua</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
     <div class="container mt-4">
       <h1>Araudia</h1>
 
@@ -129,6 +146,13 @@
           if (navbarCollapse.classList.contains("show")) {
             navbarCollapse.classList.remove("show");
           }
+
+          document.querySelectorAll(".mobile-nav .nav-link").forEach((link) => {
+            link.classList.remove("active");
+            if (link.getAttribute("href") === "#" + hash) {
+              link.classList.add("active");
+            }
+          });
         }
       }
       showSection();
