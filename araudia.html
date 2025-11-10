@@ -19,6 +19,17 @@
           display: block;
         }
       }
+
+      .mobile-nav .nav-pills .nav-link {
+        background-color: #212529;
+        color: #fff;
+        border: 1px solid #212529;
+      }
+      .mobile-nav .nav-pills .nav-link.active {
+        background-color: #000;
+        color: #fff;
+        border-color: #000;
+      }
     </style>
   </head>
   <body>
@@ -96,13 +107,13 @@
     <div class="mobile-nav d-md-none">
       <div class="container">
         <ul class="nav nav-pills nav-fill">
-          <li class="nav-item">
+          <li class="nav-item mx-1">
             <a class="nav-link active" href="#orokorra">Orokorra</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item mx-1">
             <a class="nav-link" href="#iigradua">II gradua</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item mx-1">
             <a class="nav-link" href="#aagradua">AA gradua</a>
           </li>
         </ul>
