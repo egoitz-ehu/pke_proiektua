@@ -10,6 +10,16 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <style>
+      .btn-outline-dark {
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        text-align: center;
+        font-size: 1.2rem;
+        border-radius: 8px;
+      }
+    </style>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
@@ -29,15 +39,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" href="index.html"
-                >Hasiera</a
-              >
+              <a class="nav-link" href="index.html">Hasiera</a>
             </li>
             <li class="nav-item">
               <a class="nav-link d-none d-lg-block" href="araudia.html"
                 >Araudia</a
               >
-                
+
               <!-- Mobileko submenua -->
               <div class="d-lg-none">
                 <a
@@ -76,17 +84,99 @@
               <a class="nav-link" href="memoriak.html">Aurretiko memoriak</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active"  aria-current="page" href="galdetegia.html">Galdetegia</a>
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="galdetegia.html"
+                >Galdetegia</a
+              >
             </li>
           </ul>
         </div>
       </div>
     </nav>
     <h1>Galdetegia</h1>
+    <div class="row">
+      <div class="col-12 col-sm-10" style="background-color: aqua;">
+        <form id="galdetegia"></form>
+      </div>
+      <div class="col-2 d-none d-sm-block" style="background-color: red;">
+        <div class="nav flex-column">
+          <a href="#galdera1" class="btn btn-outline-dark mb-2">1</a>
+          <a href="#galdera2" class="btn btn-outline-dark mb-2">2</a>
+          <a href="#galdera3" class="btn btn-outline-dark mb-2">3</a>
+        </div>
+      </div>
+    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    <script>
+      const galderak = [
+        {
+          id: "galdera1",
+          galdera: "GrALaren helburuak ulertzen dituzu?",
+          mota: "radio",
+          aukerak: [
+            { id: "bai", label: "Bai" },
+            { id: "ez", label: "Ez" }
+          ]
+        },
+        {
+          id: "galdera2",
+          galdera: "Honakoa hauetatik zein da zuzena",
+          mota: "radio",
+          aukerak: [
+            { id: "1", label: "Gradu amaierako lana talde lan bat da" },
+            { id: "2", label: "Gradu amaierako lana banakako lan bat da" },
+            { id:"3", label: "Gradu amaierako lana bai banakakoa bai taldeko lana izan daiteke"},
+            { id:"4", label: "Gradu amaierako lana bikoteka egiten lana da"}
+          ], emaitza: "2"
+        },
+        {
+          id: "galdera3",
+          galdera: "Zein gaitasunak dituzu? (aukeratu batzuk)",
+          mota: "checkbox",
+          aukerak: [
+            { id: "komunikazioa", label: "Komunikazioa" },
+            { id: "taldelana", label: "Talde lana" },
+            { id: "analisi", label: "Analisi gaitasuna" },
+            { id: "programazioa", label: "Programazioa" }
+          ]
+        }
+      ];
+      const galdetegia = document.getElementById("galdetegia");
+      galderak.forEach(galdera => {
+        let html = `<div class="card mb-3" id="${galdera.id}">
+          <div class="card-body">
+            <h5 class="card-title">${galdera.galdera}</h5>`;
+        if (galdera.mota === "radio") {
+          html += "<div>";
+          galdera.aukerak.forEach(aukera => {
+            html += `
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="${galdera.id}" id="${galdera.id}_${aukera.id}" value="${aukera.id}">
+                <label class="form-check-label" for="${galdera.id}_${aukera.id}">${aukera.label}</label>
+              </div>`;
+          });
+          html += "</div>";
+        } else if (galdera.mota === "checkbox") {
+          html += "<div>";
+          galdera.aukerak.forEach(aukera => {
+            html += `
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="${galdera.id}" id="${galdera.id}_${aukera.id}" value="${aukera.id}">
+                <label class="form-check-label" for="${galdera.id}_${aukera.id}">${aukera.label}</label>
+              </div>`;
+          });
+          html += "</div>";
+        }
+        html += `</div></div>`;
+        galdetegia.innerHTML += html;
+      });
+      galdetegia.innerHTML += `<button type="submit" class="btn btn-success w-100 mb-4">Bidali</button>`;
+    </script>
   </body>
 </html>
