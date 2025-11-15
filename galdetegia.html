@@ -117,12 +117,14 @@
       const galderak = [
         {
           id: "galdera1",
-          galdera: "GrALaren helburuak ulertzen dituzu?",
+          galdera: "Noiz egiten da GrAL-erako matrikula?",
           mota: "radio",
           aukerak: [
-            { id: "bai", label: "Bai" },
-            { id: "ez", label: "Ez" }
-          ]
+            { id: "1", label: "GrAL-erako matrikula ez dator bat ohiko matrikulekin, hau da, bere egun propioak ditu matrikula egiteko" },
+            { id: "2", label: "GrAL-erako matrikula ohiko matrikula epeetan egiten da." },
+            { id: "3", label: "GrAL-a egiteko ez dago matrikulatu beharrik."}
+          ],
+          emaitza: "2"
         },
         {
           id: "galdera2",
@@ -137,14 +139,97 @@
         },
         {
           id: "galdera3",
-          galdera: "Zein gaitasunak dituzu? (aukeratu batzuk)",
+          galdera: "Zer garatzen da GrAL-ean?",
+          mota: "radio",
+          aukerak: [
+            { id: "1", label: "Lan munduan barneratzeko oinarriak" },
+            { id: "2", label: "Ikasketa aldian jasotako prestakuntza gaiak eta lortu den ahalmena" },
+            { id: "3", label: "Norbera ikasketa alditik kanpo eskuratu duen jakinduria" },
+            { id: "4", label: "Aurreko erantzun guztiak zuzenak dira" }
+          ],
+          emaitza: "2"
+        },
+        {
+          id: "galdera4",
+          galdera: "Hauetako zein arau bete behar dira GrAL egiterakoan?",
           mota: "checkbox",
           aukerak: [
-            { id: "komunikazioa", label: "Komunikazioa" },
-            { id: "taldelana", label: "Talde lana" },
-            { id: "analisi", label: "Analisi gaitasuna" },
-            { id: "programazioa", label: "Programazioa" }
-          ]
+            { id: "1", label: "UPV/EHU-ren erakundeko irudia eta tipografia erabiltzea" },
+            { id: "2", label: "Hizketa inklusiboa eta generoaren ikuspegia txertatzea gizakiekin zerikusia daukaten lanetan" },
+            { id: "3", label: "Ez da derrigorrezkoa tipografia ofiziala erabiltzea" },
+            { id: "4", label: "Aurreko erantzun guztiak zuzenak dira" }
+          ],
+          emaitza: ["1","2"]
+        },
+        {
+          id: "galdera5",
+          galdera: "Nola entregatu behar dut nire GrAL-a?",
+          mota: "radio",
+          aukerak: [
+            { id: "1", label: "Txosten inprimatu bat entregatu behar da" },
+            { id: "2", label: "Ez da ezer entregatu behar aurkezpen batekin nahikoa da" },
+            { id: "3", label: "Addi bidez entregatu behar da eta ondoren defentsa bat egin lan horren inguruan" },
+            { id: "4", label: "Poster batean entregatu behar da" }
+          ],
+          emaitza: "3"
+        },
+        {
+          id: "galdera6",
+          galdera: "Zenbat deialdi ditut matrikula egin ondoren?",
+          mota: "radio",
+          aukerak: [
+            { id: "1", label: "1" },
+            { id: "2", label: "2" },
+            { id: "3", label: "3" },
+            { id: "4", label: "4 edo gehiago" }
+          ],
+          emaitza: "2"
+        },
+        {
+          id: "galdera7",
+          galdera: "Zein da zuzendariaren lana GrAL-ean?",
+          mota: "radio",
+          aukerak: [
+            { id: "1", label: "Ikaslearen lana ebaluatu soilik egingo du" },
+            { id: "2", label: "Zuzendariak informazioa lagungarria eskeiniko dio" },
+            { id: "3", label: "Ikaslea orientatu eta helburuak betzen dituela bermatu" },
+            { id: "4", label: "Aurreko erantzun guztiak okerrak dira" }
+          ],
+          emaitza: "3"
+        },
+        {
+          id: "galdera8",
+          galdera: "Posible al da GRAL-a kanpoko erakunde batean egitea?",
+          mota: "radio",
+          aukerak: [
+            { id: "1", label: "Bai" },
+            { id: "2", label: "Ez" }
+          ],
+          emaitza: "1"
+        },
+        {
+          id: "galdera9",
+          galdera: "Demagun informatika ingenieritzako ikasle bat zarela, zein kasutan egin dezakezu GrAL-a?",
+          mota: "radio",
+          aukerak: [
+            { id: "1", label: "18 kreditu soilik geratzen zaizkit gainditu gabe eta guztiak hautazko ikasgaiak dira" },
+            { id: "2", label: "18 kreditu soilik geratzen zaizkit baina oinarrizko ikasgai bat gainditu gabe dut" },
+            { id: "3", label: "18 kreditu baino gehiago ditut gainditu gabe"},
+            { id: "4", label: "Aurreko erantzun guztiak okerrak dira, kreditu guztiak gaindituta izan behar ditut"}
+          ],
+          emaitza: "1"
+        },
+        {
+          id: "galdera10",
+          galdera: "Zer egin behar dut defentsa eskatzeko",
+          mota: "radio",
+          aukerak: [
+            { id: "1", label: "GrAL-ean matrikulatuta egotea nahikoa da." },
+            { id: "2", label: "Ez dago matrikularik egin beharrik" },
+            { id: "3", label: "Zuzendariak eskatu behar du"},
+            { id: "4", label: "GrAL-ean matrikulatuta egoteaz gain, proiektua bera ere matrikulatu beharra dago."}
+          ],
+          emaitza: "4"
         }
       ];
       const galdetegia = document.getElementById("galdetegia");
