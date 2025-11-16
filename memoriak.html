@@ -10,9 +10,10 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Gradu Amaierako Lana</a>
         <button
@@ -29,7 +30,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" href="index.html"
+              <a class="nav-link"href="index.html"
                 >Hasiera</a
               >
             </li>
@@ -78,6 +79,18 @@
             <li class="nav-item">
               <a class="nav-link" href="galdetegia.html">Galdetegia</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="harpidetza.html">Informazio harpidetza</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="aboutus.html">About Us</a>
+            </li>
+            <li class="nav-item d-flex align-items-center ms-2">
+                <button class="btn btn-outline-light border-2 rounded-pill px-3 py-2 d-flex align-items-center shadow-sm h-auto" id="themeToggleBtn" type="button" onclick="toggleTheme()">
+                    <span id="themeIcon" class="bi bi-moon fs-5 me-2 lh-1"></span>
+                    <span class="fw-semibold d-none d-sm-inline lh-1">Aldatu gaia</span>
+                </button>
+            </li>
           </ul>
         </div>
       </div>
@@ -88,5 +101,6 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    <script src="js/theme.js" />
   </body>
 </html>
