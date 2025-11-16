@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hasiera</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Gradu Amaierako Lana</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link"href="index.html"
+                >Hasiera</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link d-none d-lg-block" href="araudia.html"
+                >Araudia</a
+              >
+                
+              <!-- Mobileko submenua -->
+              <div class="d-lg-none">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Araudia
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="araudia.html#orokorra"
+                      >Araudi orokorra</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="araudia.html#iigradua"
+                      >II gradua</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="araudia.html#aagradua"
+                      >AA gradua</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="egutegia.html">Egutegia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="memoriak.html">Aurretiko memoriak</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="galdetegia.html">Galdetegia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="harpidetza.html">Informazio harpidetza</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8 bg-white rounded shadow p-4">
+          <h2 class="mb-3 text-success fw-bold">Informazio harpidetza</h2>
+          <p class="mb-4">Gradu Amaierako Lanaren inguruko azekn informazioa lortu nahi duzu? Hori bada zure helbudua leku egokian zaude. Azken eguneraketak zuzenean zure emailean jasotzeko bete ondorengo galdera.</p>
+          <form id="harpidetzaForm">
+            <div class="mb-3">
+              <label for="emailInput" class="form-label">Emaila</label>
+              <input type="text" class="form-control" id="emailInput" placeholder="zure@emaila.eus">
+            </div>
+            <button type="submit" class="btn btn-success w-100">Harpidetu</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="harpidetzaModal" tabindex="-1" aria-labelledby="harpidetzaModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="harpidetzaModalLabel">Emaitza</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Itxi"></button>
+          </div>
+          <div class="modal-body mb-4" id="modalMezua"></div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+        document.getElementById('harpidetzaForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const email = document.getElementById('emailInput').value.trim();
+        const modal = new bootstrap.Modal(document.getElementById('harpidetzaModal'));
+        const mezua = document.getElementById('modalMezua');
+        if (validateEmail(email)) {
+          mezua.innerHTML = '<span class="text-success fw-bold">Zure emaila ondo jaso da! Eskerrik asko harpidetzeagatik.</span>';
+        } else {
+          mezua.innerHTML = '<span class="text-danger fw-bold">Emaila ez da zuzena. Mesedez, berriro saiatu.</span>';
+        }
+        modal.show();
+      });
+
+      function validateEmail(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      }
+    </script>
+  </body>
+</html>
