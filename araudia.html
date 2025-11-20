@@ -22,14 +22,17 @@
       }
 
       .mobile-nav .nav-pills .nav-link {
-        background-color: #212529;
-        color: #fff;
         border: 1px solid #212529;
       }
       .mobile-nav .nav-pills .nav-link.active {
-        background-color: #000;
-        color: #fff;
         border-color: #000;
+      }
+
+      [data-bs-theme="dark"] .mobile-nav .nav-pills .nav-link {
+        border-color: #fff !important;
+      }
+      [data-bs-theme="dark"] .mobile-nav .nav-pills .nav-link.active {
+        border-color: #fff !important;
       }
     </style>
   </head>
