@@ -20,6 +20,15 @@
         aspect-ratio: 16/9;
         object-fit: cover;
       }
+      [data-bs-theme="light"] .carousel-control-prev-icon,
+      [data-bs-theme="light"] .carousel-control-next-icon {
+        filter: invert(1) grayscale(1);
+      }
+
+      [data-bs-theme="dark"] .carousel-control-prev-icon,
+      [data-bs-theme="dark"] .carousel-control-next-icon {
+        filter: none;
+      }
     </style>
   </head>
   <body>
@@ -174,7 +183,10 @@
     </div>
     <div class="container mt-5 mb-5">
       <h3 class="text-center mb-4">Aurretiko GrAL posterrak</h3>
-      <p class="text-center mb-4">Informatika fakultatean dokumentazio guztiaz gain poster bat entregatu behar da. Hona hemen zenbait adibide:</p>
+      <p class="text-center mb-4">
+        Informatika fakultatean dokumentazio guztiaz gain poster bat entregatu
+        behar da. Hona hemen zenbait adibide:
+      </p>
       <div class="row justify-content-center">
         <div class="col-12 col-md-8 col-lg-6">
           <div class="card shadow rounded">
