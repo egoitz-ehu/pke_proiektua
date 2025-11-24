@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Egutegia</title>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -17,7 +18,7 @@
     </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Gradu Amaierako Lana</a>
         <button
@@ -75,7 +76,7 @@
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="egutegia.html">Egutegia</a>
+              <a class="nav-link" href="egutegia.html">Egutegia</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="memoriak.html">Aurretiko memoriak</a>
@@ -84,7 +85,16 @@
               <a class="nav-link" href="galdetegia.html">Galdetegia</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="aboutus.html">About us</a>
+              <a class="nav-link" href="harpidetza.html">Informazio harpidetza</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="aboutus.html">About Us</a>
+            </li>
+            <li class="nav-item d-flex align-items-center ms-2">
+                <button class="btn btn-outline-light border-2 rounded-pill px-3 py-2 d-flex align-items-center shadow-sm h-auto" id="themeToggleBtn" type="button" onclick="toggleTheme()">
+                    <span id="themeIcon" class="bi bi-moon fs-5 me-2 lh-1"></span>
+                    <span class="fw-semibold d-none d-sm-inline lh-1">Aldatu gaia</span>
+                </button>
             </li>
           </ul>
         </div>
@@ -124,5 +134,6 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    <script src="js/theme.js" />
   </body>
 </html>
