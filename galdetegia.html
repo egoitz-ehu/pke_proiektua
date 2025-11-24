@@ -9,7 +9,10 @@
       rel="stylesheet"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
     <style>
       .btn-outline-dark {
         width: 40px;
@@ -67,15 +70,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link"href="index.html"
-                >Hasiera</a
-              >
+              <a class="nav-link" href="index.html">Hasiera</a>
             </li>
             <li class="nav-item">
               <a class="nav-link d-none d-lg-block" href="araudia.html"
                 >Araudia</a
               >
-                
+
               <!-- Mobileko submenua -->
               <div class="d-lg-none">
                 <a
@@ -114,19 +115,33 @@
               <a class="nav-link" href="memoriak.html">Aurretiko memoriak</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active"  aria-current="page"href="galdetegia.html">Galdetegia</a>
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="galdetegia.html"
+                >Galdetegia</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="harpidetza.html">Informazio harpidetza</a>
+              <a class="nav-link" href="harpidetza.html"
+                >Informazio harpidetza</a
+              >
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="aboutus.html">About Us</a>
+              <a class="nav-link" href="aboutus.html">About Us</a>
             </li>
             <li class="nav-item d-flex align-items-center ms-2">
-                <button class="btn btn-outline-light border-2 rounded-pill px-3 py-2 d-flex align-items-center shadow-sm h-auto" id="themeToggleBtn" type="button" onclick="toggleTheme()">
-                    <span id="themeIcon" class="bi bi-moon fs-5 me-2 lh-1"></span>
-                    <span class="fw-semibold d-none d-sm-inline lh-1">Aldatu gaia</span>
-                </button>
+              <button
+                class="btn btn-outline-light border-2 rounded-pill px-3 py-2 d-flex align-items-center shadow-sm h-auto"
+                id="themeToggleBtn"
+                type="button"
+                onclick="toggleTheme()"
+              >
+                <span id="themeIcon" class="bi bi-moon fs-5 me-2 lh-1"></span>
+                <span class="fw-semibold d-none d-sm-inline lh-1"
+                  >Aldatu gaia</span
+                >
+              </button>
             </li>
           </ul>
         </div>
@@ -134,41 +149,113 @@
     </nav>
     <div class="container">
       <h1 class="text-center fw-bold mb-4 mt-3">Galdetegia</h1>
-      <p class="text-center mb-4 mt-3">Gradu Amaierako Lanaren inguruko galdetegi bat da ondorengoa. Bertan lan honen buruzko galderak aurkituko dituzu. Zure gaitasunak aztertzeko egokiak direnak. Animo!</p>
+      <p class="text-center mb-4 mt-3">
+        Gradu Amaierako Lanaren inguruko galdetegi bat da ondorengoa. Bertan lan
+        honen buruzko galderak aurkituko dituzu. Zure gaitasunak aztertzeko
+        egokiak direnak. Animo!
+      </p>
       <div class="row justify-content-center">
-        <div class="col-12 col-md-10 col-lg-8 bg-body rounded shadow p-4 mb-4">
+        <!-- Columna del formulario -->
+        <div class="col-12 col-lg-9 bg-body rounded shadow p-4 mb-4">
           <form id="galdetegia"></form>
         </div>
-        <div class="col-2 d-none d-sm-block">
-          <div class="nav flex-column align-items-center mt-4">
-            <a href="#galdera1" class="btn btn-outline-primary mb-2">1</a>
-            <a href="#galdera2" class="btn btn-outline-primary mb-2">2</a>
-            <a href="#galdera3" class="btn btn-outline-primary mb-2">3</a>
-            <a href="#galdera4" class="btn btn-outline-primary mb-2">4</a>
-            <a href="#galdera5" class="btn btn-outline-primary mb-2">5</a>
-            <a href="#galdera6" class="btn btn-outline-primary mb-2">6</a>
-            <a href="#galdera7" class="btn btn-outline-primary mb-2">7</a>
-            <a href="#galdera8" class="btn btn-outline-primary mb-2">8</a>
-            <a href="#galdera9" class="btn btn-outline-primary mb-2">9</a>
-            <a href="#galdera10" class="btn btn-outline-primary mb-2">10</a>
+
+        <!-- Columna de botones laterales -->
+        <div class="col-lg-2 d-none d-lg-block">
+          <div class="sticky-top" style="top: 80px">
+            <div class="row row-cols-2 g-2">
+              <div class="col">
+                <a href="#galdera1" class="btn btn-outline-secondary w-100"
+                  >1</a
+                >
+              </div>
+              <div class="col">
+                <a href="#galdera2" class="btn btn-outline-secondary w-100"
+                  >2</a
+                >
+              </div>
+              <div class="col">
+                <a href="#galdera3" class="btn btn-outline-secondary w-100"
+                  >3</a
+                >
+              </div>
+              <div class="col">
+                <a href="#galdera4" class="btn btn-outline-secondary w-100"
+                  >4</a
+                >
+              </div>
+              <div class="col">
+                <a href="#galdera5" class="btn btn-outline-secondary w-100"
+                  >5</a
+                >
+              </div>
+              <div class="col">
+                <a href="#galdera6" class="btn btn-outline-secondary w-100"
+                  >6</a
+                >
+              </div>
+              <div class="col">
+                <a href="#galdera7" class="btn btn-outline-secondary w-100"
+                  >7</a
+                >
+              </div>
+              <div class="col">
+                <a href="#galdera8" class="btn btn-outline-secondary w-100"
+                  >8</a
+                >
+              </div>
+              <div class="col">
+                <a href="#galdera9" class="btn btn-outline-secondary w-100"
+                  >9</a
+                >
+              </div>
+              <div class="col">
+                <a href="#galdera10" class="btn btn-outline-secondary w-100"
+                  >10</a
+                >
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="modal fade" id="resultadosModal" tabindex="-1" aria-labelledby="resultadosModalLabel" aria-hidden="true">
+    <div
+      class="modal fade"
+      id="resultadosModal"
+      tabindex="-1"
+      aria-labelledby="resultadosModalLabel"
+      aria-hidden="true"
+    >
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="resultadosModalLabel">Emaitzak</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
           </div>
           <div class="modal-body">
             <div id="resultadoContent"></div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Itxi</button>
-            <button type="button" class="btn btn-success" onclick="berrizHasi()">Berriz hasi</button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+            >
+              Itxi
+            </button>
+            <button
+              type="button"
+              class="btn btn-success"
+              onclick="berrizHasi()"
+            >
+              Berriz hasi
+            </button>
           </div>
         </div>
       </div>
@@ -185,11 +272,18 @@
           galdera: "1.Noiz egiten da GrAL-erako matrikula?",
           mota: "radio",
           aukerak: [
-            { id: "1", label: "GrAL-erako matrikula ez dator bat ohiko matrikulekin, hau da, bere egun propioak ditu matrikula egiteko" },
-            { id: "2", label: "GrAL-erako matrikula ohiko matrikula epeetan egiten da." },
-            { id: "3", label: "GrAL-a egiteko ez dago matrikulatu beharrik."}
+            {
+              id: "1",
+              label:
+                "GrAL-erako matrikula ez dator bat ohiko matrikulekin, hau da, bere egun propioak ditu matrikula egiteko",
+            },
+            {
+              id: "2",
+              label: "GrAL-erako matrikula ohiko matrikula epeetan egiten da.",
+            },
+            { id: "3", label: "GrAL-a egiteko ez dago matrikulatu beharrik." },
           ],
-          emaitza: "2"
+          emaitza: "2",
         },
         {
           id: "galdera2",
@@ -198,9 +292,14 @@
           aukerak: [
             { id: "1", label: "Gradu amaierako lana talde lan bat da" },
             { id: "2", label: "Gradu amaierako lana banakako lan bat da" },
-            { id:"3", label: "Gradu amaierako lana bai banakakoa bai taldeko lana izan daiteke"},
-            { id:"4", label: "Gradu amaierako lana bikoteka egiten lana da"}
-          ], emaitza: "2"
+            {
+              id: "3",
+              label:
+                "Gradu amaierako lana bai banakakoa bai taldeko lana izan daiteke",
+            },
+            { id: "4", label: "Gradu amaierako lana bikoteka egiten lana da" },
+          ],
+          emaitza: "2",
         },
         {
           id: "galdera3",
@@ -208,23 +307,40 @@
           mota: "radio",
           aukerak: [
             { id: "1", label: "Lan munduan barneratzeko oinarriak" },
-            { id: "2", label: "Ikasketa aldian jasotako prestakuntza gaiak eta lortu den ahalmena" },
-            { id: "3", label: "Norbera ikasketa alditik kanpo eskuratu duen jakinduria" },
-            { id: "4", label: "Aurreko erantzun guztiak zuzenak dira" }
+            {
+              id: "2",
+              label:
+                "Ikasketa aldian jasotako prestakuntza gaiak eta lortu den ahalmena",
+            },
+            {
+              id: "3",
+              label: "Norbera ikasketa alditik kanpo eskuratu duen jakinduria",
+            },
+            { id: "4", label: "Aurreko erantzun guztiak zuzenak dira" },
           ],
-          emaitza: "2"
+          emaitza: "2",
         },
         {
           id: "galdera4",
           galdera: "4.Hauetako zein arau bete behar dira GrAL egiterakoan?",
           mota: "checkbox",
           aukerak: [
-            { id: "1", label: "UPV/EHU-ren erakundeko irudia eta tipografia erabiltzea" },
-            { id: "2", label: "Hizketa inklusiboa eta generoaren ikuspegia txertatzea gizakiekin zerikusia daukaten lanetan" },
-            { id: "3", label: "Ez da derrigorrezkoa tipografia ofiziala erabiltzea" },
-            { id: "4", label: "Aurreko erantzun guztiak zuzenak dira" }
+            {
+              id: "1",
+              label: "UPV/EHU-ren erakundeko irudia eta tipografia erabiltzea",
+            },
+            {
+              id: "2",
+              label:
+                "Hizketa inklusiboa eta generoaren ikuspegia txertatzea gizakiekin zerikusia daukaten lanetan",
+            },
+            {
+              id: "3",
+              label: "Ez da derrigorrezkoa tipografia ofiziala erabiltzea",
+            },
+            { id: "4", label: "Aurreko erantzun guztiak zuzenak dira" },
           ],
-          emaitza: ["1","2"]
+          emaitza: ["1", "2"],
         },
         {
           id: "galdera5",
@@ -232,11 +348,18 @@
           mota: "radio",
           aukerak: [
             { id: "1", label: "Txosten inprimatu bat entregatu behar da" },
-            { id: "2", label: "Ez da ezer entregatu behar aurkezpen batekin nahikoa da" },
-            { id: "3", label: "Addi bidez entregatu behar da eta ondoren defentsa bat egin lan horren inguruan" },
-            { id: "4", label: "Poster batean entregatu behar da" }
+            {
+              id: "2",
+              label: "Ez da ezer entregatu behar aurkezpen batekin nahikoa da",
+            },
+            {
+              id: "3",
+              label:
+                "Addi bidez entregatu behar da eta ondoren defentsa bat egin lan horren inguruan",
+            },
+            { id: "4", label: "Poster batean entregatu behar da" },
           ],
-          emaitza: "3"
+          emaitza: "3",
         },
         {
           id: "galdera6",
@@ -246,9 +369,9 @@
             { id: "1", label: "1" },
             { id: "2", label: "2" },
             { id: "3", label: "3" },
-            { id: "4", label: "4 edo gehiago" }
+            { id: "4", label: "4 edo gehiago" },
           ],
-          emaitza: "2"
+          emaitza: "2",
         },
         {
           id: "galdera7",
@@ -256,11 +379,17 @@
           mota: "radio",
           aukerak: [
             { id: "1", label: "Ikaslearen lana ebaluatu soilik egingo du" },
-            { id: "2", label: "Zuzendariak informazioa lagungarria eskeiniko dio" },
-            { id: "3", label: "Ikaslea orientatu eta helburuak betzen dituela bermatu" },
-            { id: "4", label: "Aurreko erantzun guztiak okerrak dira" }
+            {
+              id: "2",
+              label: "Zuzendariak informazioa lagungarria eskeiniko dio",
+            },
+            {
+              id: "3",
+              label: "Ikaslea orientatu eta helburuak betzen dituela bermatu",
+            },
+            { id: "4", label: "Aurreko erantzun guztiak okerrak dira" },
           ],
-          emaitza: "3"
+          emaitza: "3",
         },
         {
           id: "galdera8",
@@ -268,21 +397,34 @@
           mota: "radio",
           aukerak: [
             { id: "1", label: "Bai" },
-            { id: "2", label: "Ez" }
+            { id: "2", label: "Ez" },
           ],
-          emaitza: "1"
+          emaitza: "1",
         },
         {
           id: "galdera9",
-          galdera: "9.Demagun informatika ingenieritzako ikasle bat zarela, zein kasutan egin dezakezu GrAL-a?",
+          galdera:
+            "9.Demagun informatika ingenieritzako ikasle bat zarela, zein kasutan egin dezakezu GrAL-a?",
           mota: "radio",
           aukerak: [
-            { id: "1", label: "18 kreditu soilik geratzen zaizkit gainditu gabe eta guztiak hautazko ikasgaiak dira" },
-            { id: "2", label: "18 kreditu soilik geratzen zaizkit baina oinarrizko ikasgai bat gainditu gabe dut" },
-            { id: "3", label: "18 kreditu baino gehiago ditut gainditu gabe"},
-            { id: "4", label: "Aurreko erantzun guztiak okerrak dira, kreditu guztiak gaindituta izan behar ditut"}
+            {
+              id: "1",
+              label:
+                "18 kreditu soilik geratzen zaizkit gainditu gabe eta guztiak hautazko ikasgaiak dira",
+            },
+            {
+              id: "2",
+              label:
+                "18 kreditu soilik geratzen zaizkit baina oinarrizko ikasgai bat gainditu gabe dut",
+            },
+            { id: "3", label: "18 kreditu baino gehiago ditut gainditu gabe" },
+            {
+              id: "4",
+              label:
+                "Aurreko erantzun guztiak okerrak dira, kreditu guztiak gaindituta izan behar ditut",
+            },
           ],
-          emaitza: "1"
+          emaitza: "1",
         },
         {
           id: "galdera10",
@@ -291,21 +433,25 @@
           aukerak: [
             { id: "1", label: "GrAL-ean matrikulatuta egotea nahikoa da." },
             { id: "2", label: "Ez dago matrikularik egin beharrik" },
-            { id: "3", label: "Zuzendariak eskatu behar du"},
-            { id: "4", label: "GrAL-ean matrikulatuta egoteaz gain, proiektua bera ere matrikulatu beharra dago."}
+            { id: "3", label: "Zuzendariak eskatu behar du" },
+            {
+              id: "4",
+              label:
+                "GrAL-ean matrikulatuta egoteaz gain, proiektua bera ere matrikulatu beharra dago.",
+            },
           ],
-          emaitza: "4"
-        }
+          emaitza: "4",
+        },
       ];
 
       const galdetegia = document.getElementById("galdetegia");
-      galderak.forEach(galdera => {
+      galderak.forEach((galdera) => {
         let html = `<div class="card mb-4 shadow-sm border-0" id="${galdera.id}">
           <div class="card-body">
             <h5 class="card-title mb-3">${galdera.galdera}</h5>`;
         if (galdera.mota === "radio") {
           html += "<div>";
-          galdera.aukerak.forEach(aukera => {
+          galdera.aukerak.forEach((aukera) => {
             html += `
               <div class="form-check mb-2">
                 <input class="form-check-input" type="radio" name="${galdera.id}" id="${galdera.id}_${aukera.id}" value="${aukera.id}">
@@ -315,7 +461,7 @@
           html += "</div>";
         } else if (galdera.mota === "checkbox") {
           html += "<div>";
-          galdera.aukerak.forEach(aukera => {
+          galdera.aukerak.forEach((aukera) => {
             html += `
               <div class="form-check mb-2">
                 <input class="form-check-input" type="checkbox" name="${galdera.id}" id="${galdera.id}_${aukera.id}" value="${aukera.id}">
@@ -328,51 +474,94 @@
         galdetegia.innerHTML += html;
       });
       galdetegia.innerHTML += `<button type="submit" class="btn btn-primary w-100 mb-2">Bidali</button>
-<button type="button" class="btn btn-outline-secondary w-100 mb-2" onclick="berrizHasi()">Reset</button>`;
+<button type="button" class="btn btn-outline-secondary w-100 mb-2" onclick="berrizHasi()">Berriz egin</button>`;
 
-      document.getElementById('galdetegia').addEventListener('submit', function(e) {
-        e.preventDefault();
-        erantzunakAztertu();
-      });
+      document
+        .getElementById("galdetegia")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          erantzunakAztertu();
+        });
 
       function erantzunakAztertu() {
         let puntuazioa = 0;
         let guztira = galderak.length;
 
-        galderak.forEach(galdera => {
+        galderak.forEach((galdera, index) => {
           const card = document.getElementById(galdera.id);
+          const botonNav = document.querySelector(`a[href="#${galdera.id}"]`);
           let erantzunaZuzena = false;
 
-          if (galdera.mota === 'radio') {
-            const hautatutakoa = document.querySelector(`input[name="${galdera.id}"]:checked`);
+          if (galdera.mota === "radio") {
+            const hautatutakoa = document.querySelector(
+              `input[name="${galdera.id}"]:checked`
+            );
             if (hautatutakoa && hautatutakoa.value === galdera.emaitza) {
               erantzunaZuzena = true;
               puntuazioa++;
-              card.classList.add('correct');
-              card.classList.remove('incorrect');
-              hautatutakoa.classList.add('correct-answer');
+              card.classList.add("correct");
+              card.classList.remove("incorrect");
+              hautatutakoa.classList.add("correct-answer");
+              if (botonNav) {
+                botonNav.classList.remove(
+                  "btn-outline-secondary",
+                  "btn-outline-danger"
+                );
+                botonNav.classList.add("btn-outline-success");
+              }
             } else {
-              card.classList.add('incorrect');
-              card.classList.remove('correct');
+              card.classList.add("incorrect");
+              card.classList.remove("correct");
               if (hautatutakoa) {
-                hautatutakoa.classList.add('incorrect-answer');
+                hautatutakoa.classList.add("incorrect-answer");
+              }
+              if (botonNav) {
+                botonNav.classList.remove(
+                  "btn-outline-secondary",
+                  "btn-outline-success"
+                );
+                botonNav.classList.add("btn-outline-danger");
               }
             }
-          } else if (galdera.mota === 'checkbox') {
-            const hautatutakoak = document.querySelectorAll(`input[name="${galdera.id}"]:checked`);
-            const hautatutakoValues = Array.from(hautatutakoak).map(input => input.value);
-            
-            if (hautatutakoValues.length === galdera.emaitza.length && 
-                galdera.emaitza.every(val => hautatutakoValues.includes(val))) {
+          } else if (galdera.mota === "checkbox") {
+            const hautatutakoak = document.querySelectorAll(
+              `input[name="${galdera.id}"]:checked`
+            );
+            const hautatutakoValues = Array.from(hautatutakoak).map(
+              (input) => input.value
+            );
+
+            if (
+              hautatutakoValues.length === galdera.emaitza.length &&
+              galdera.emaitza.every((val) => hautatutakoValues.includes(val))
+            ) {
               erantzunaZuzena = true;
               puntuazioa++;
-              card.classList.add('correct');
-              card.classList.remove('incorrect');
-              hautatutakoak.forEach(input => input.classList.add('correct-answer'));
+              card.classList.add("correct");
+              card.classList.remove("incorrect");
+              hautatutakoak.forEach((input) =>
+                input.classList.add("correct-answer")
+              );
+              if (botonNav) {
+                botonNav.classList.remove(
+                  "btn-outline-secondary",
+                  "btn-outline-danger"
+                );
+                botonNav.classList.add("btn-outline-success");
+              }
             } else {
-              card.classList.add('incorrect');
-              card.classList.remove('correct');
-              hautatutakoak.forEach(input => input.classList.add('incorrect-answer'));
+              card.classList.add("incorrect");
+              card.classList.remove("correct");
+              hautatutakoak.forEach((input) =>
+                input.classList.add("incorrect-answer")
+              );
+              if (botonNav) {
+                botonNav.classList.remove(
+                  "btn-outline-secondary",
+                  "btn-outline-success"
+                );
+                botonNav.classList.add("btn-outline-danger");
+              }
             }
           }
         });
@@ -382,21 +571,21 @@
 
       function erantzunakErakutsi(puntuazioa, guztira) {
         const ehunekoa = Math.round((puntuazioa / guztira) * 100);
-        let mezua = '';
-        let kolorea = '';
+        let mezua = "";
+        let kolorea = "";
 
         if (ehunekoa >= 80) {
-          mezua = 'Bikaina! Oso ongi dakizu araudia.';
-          kolorea = 'text-success';
+          mezua = "Bikaina! Oso ongi dakizu araudia.";
+          kolorea = "text-success";
         } else if (ehunekoa >= 60) {
-          mezua = 'Ongi! Baina zertxobait gehiago ikasi beharko duzu.';
-          kolorea = 'text-warning';
+          mezua = "Ongi! Baina zertxobait gehiago ikasi beharko duzu.";
+          kolorea = "text-warning";
         } else {
-          mezua = 'Araudia berriro irakurri eta berriz saiatu.';
-          kolorea = 'text-danger';
+          mezua = "Araudia berriro irakurri eta berriz saiatu.";
+          kolorea = "text-danger";
         }
 
-        document.getElementById('resultadoContent').innerHTML = `
+        document.getElementById("resultadoContent").innerHTML = `
           <div class="text-center">
             <h4 class="${kolorea}">Puntuazioa: ${puntuazioa}/${guztira}</h4>
             <p class="fs-5 ${kolorea}">${ehunekoa}%</p>
@@ -404,22 +593,33 @@
           </div>
         `;
 
-        const modal = new bootstrap.Modal(document.getElementById('resultadosModal'));
+        const modal = new bootstrap.Modal(
+          document.getElementById("resultadosModal")
+        );
         modal.show();
       }
 
       function berrizHasi() {
-        document.querySelectorAll('input[type="radio"], input[type="checkbox"]').forEach(input => {
-          input.checked = false;
-          input.classList.remove('correct-answer', 'incorrect-answer');
+        document
+          .querySelectorAll('input[type="radio"], input[type="checkbox"]')
+          .forEach((input) => {
+            input.checked = false;
+            input.classList.remove("correct-answer", "incorrect-answer");
+          });
+
+        document.querySelectorAll(".card").forEach((card) => {
+          card.classList.remove("correct", "incorrect");
         });
 
-        document.querySelectorAll('.card').forEach(card => {
-          card.classList.remove('correct', 'incorrect');
+        document.querySelectorAll('a[href^="#galdera"]').forEach((boton) => {
+          boton.classList.remove("btn-outline-success", "btn-outline-danger");
+          boton.classList.add("btn-outline-secondary");
         });
 
-        const modal = bootstrap.Modal.getInstance(document.getElementById('resultadosModal'));
-        modal.hide();
+        const modal = bootstrap.Modal.getInstance(
+          document.getElementById("resultadosModal")
+        );
+        if (modal) modal.hide();
       }
     </script>
     <script src="js/theme.js" />
