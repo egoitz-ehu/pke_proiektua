@@ -513,6 +513,10 @@
           const botonNav = document.querySelector(`a[href="#${galdera.id}"]`);
           let erantzunaZuzena = false;
 
+          if (botonNav) {
+            botonNav.innerHTML = index + 1;
+          }
+
           if (galdera.mota === "radio") {
             const hautatutakoa = document.querySelector(
               `input[name="${galdera.id}"]:checked`
@@ -523,7 +527,7 @@
               card.classList.add("correct");
               card.classList.remove("incorrect");
               hautatutakoa.classList.add("correct-answer");
-              // Añade tick
+
               const label = card.querySelector(
                 `label[for="${hautatutakoa.id}"]`
               );
@@ -539,6 +543,8 @@
                   "btn-outline-danger"
                 );
                 botonNav.classList.add("btn-outline-success");
+                botonNav.innerHTML =
+                  index + 1 + ' <span class="text-success fw-bold">✔️</span>';
               }
             } else {
               card.classList.add("incorrect");
@@ -576,6 +582,8 @@
                   "btn-outline-success"
                 );
                 botonNav.classList.add("btn-outline-danger");
+                botonNav.innerHTML =
+                  index + 1 + ' <span class="text-danger fw-bold">❌</span>';
               }
             }
           } else if (galdera.mota === "checkbox") {
@@ -611,6 +619,8 @@
                   "btn-outline-danger"
                 );
                 botonNav.classList.add("btn-outline-success");
+                botonNav.innerHTML =
+                  index + 1 + ' <span class="text-success fw-bold">✔️</span>';
               }
             } else {
               card.classList.add("incorrect");
@@ -650,6 +660,8 @@
                   "btn-outline-success"
                 );
                 botonNav.classList.add("btn-outline-danger");
+                botonNav.innerHTML =
+                  index + 1 + ' <span class="text-danger fw-bold">❌</span>';
               }
             }
           }
@@ -689,26 +701,7 @@
       }
 
       function berrizHasi() {
-        document
-          .querySelectorAll('input[type="radio"], input[type="checkbox"]')
-          .forEach((input) => {
-            input.checked = false;
-            input.classList.remove("correct-answer", "incorrect-answer");
-          });
-
-        document.querySelectorAll(".card").forEach((card) => {
-          card.classList.remove("correct", "incorrect");
-        });
-
-        document.querySelectorAll('a[href^="#galdera"]').forEach((boton) => {
-          boton.classList.remove("btn-outline-success", "btn-outline-danger");
-          boton.classList.add("btn-outline-secondary");
-        });
-
-        const modal = bootstrap.Modal.getInstance(
-          document.getElementById("resultadosModal")
-        );
-        if (modal) modal.hide();
+        location.reload();
       }
     </script>
     <script src="js/theme.js"></script>
