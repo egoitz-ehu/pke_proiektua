@@ -1,135 +1,57 @@
 const memoriak = [
   {
-    gradua: "informatika",
-    izenburua: "Adibidea 1",
-    link: "https://addi.ehu.es/handle/10810/1?locale-attribute=eu",
+    gradua: "Ingeniaritza Informatika",
+    izenburua: "Web irisgarritasun ebaluaketa kolaboratiboa bermatzeko web sistema baten garapena",
+    egilea: "Larrañaga Aguirrezabala, Julen",
+    link: "https://addi.ehu.es/handle/10810/63225",
   },
   {
-    gradua: "informatika",
-    izenburua: "Adibidea 2",
-    link: "https://addi.ehu.es/handle/10810/2?locale-attribute=eu",
+    gradua: "Ingeniaritza Informatika",
+    izenburua: "Diabetes gaixotasuna kudeatzeko kode irekiko aplikazio bati funtzionalitate berri bat gehitu: hartu beharreko insulina kopurua modu automatikoan kalkulatu errefortzu bidezko ikasketa erabiliz",
+    egilea: "Hurtado Pelaez, Unai",
+    link: "https://addi.ehu.es/handle/10810/63224",
+  },
+    {
+    gradua: "Ingeniaritza Informatika",
+    izenburua: "Datu-baseen optimizazioa: kasu praktiko bat",
+    egilea: "Nerea Mendizabal",
+    link: "https://addi.ehu.es/handle/10810/67349",
   },
   {
-    gradua: "adimen_artifiziala",
-    izenburua: "Adimen Artifiziala TFG",
-    link: "https://addi.ehu.es/handle/10810/3?locale-attribute=eu",
+    gradua: "Adimen Artifiziala",
+    izenburua: "Detecting attention objects in the wild with Pepper",
+    egilea: "Samaniego Alonso, Miren",
+    link: "https://addi.ehu.es/handle/10810/74104",
   },
   {
-    gradua: "telekomunikazioak",
-    izenburua: "Telekomunikazioak TFG",
-    link: "https://addi.ehu.es/handle/10810/4?locale-attribute=eu",
+    gradua: "Adimen Artifiziala",
+    izenburua: "Occlusion-Aware Gaze Detection System for Driver Attention Control",
+    egilea: "Diez Robertson, Alexander",
+    link: "https://addi.ehu.es/handle/10810/74100",
   },
   {
-    gradua: "informatika",
-    izenburua: "Adibidea 1",
-    link: "https://addi.ehu.es/handle/10810/1?locale-attribute=eu",
+    gradua: "Adimen Artifiziala",
+    izenburua: "Comparison of learning-efficiency using PEFT techniques",
+    egilea: "Ferro Postigo, Markel",
+    link: "https://addi.ehu.es/handle/10810/74101",
   },
   {
-    gradua: "informatika",
-    izenburua: "Adibidea 2",
-    link: "https://addi.ehu.es/handle/10810/2?locale-attribute=eu",
+    gradua: "Erizaintza",
+    izenburua: "Iktusaren ondoriozko disfagia orofaringeoaren konplikazioen prebentzioa degluzio eta nutrizio terapien bidez",
+    egilea: "García Gómez, Olaia",
+    link: "https://addi.ehu.es/handle/10810/74757",
   },
   {
-    gradua: "adimen_artifiziala",
-    izenburua: "Adimen Artifiziala TFG",
-    link: "https://addi.ehu.es/handle/10810/3?locale-attribute=eu",
+    gradua: "Erizaintza",
+    izenburua: "Revolucionando la hemodiálisis: efectos del ejercicio físico en la calidad de vida de pacientes con enfermedad renal crónica",
+    egilea: "González Gallego, Ian",
+    link: "https://addi.ehu.es/handle/10810/74758",
   },
   {
-    gradua: "telekomunikazioak",
-    izenburua: "Telekomunikazioak TFG",
-    link: "https://addi.ehu.es/handle/10810/4?locale-attribute=eu",
-  },
-  {
-    gradua: "informatika",
-    izenburua: "Adibidea 1",
-    link: "https://addi.ehu.es/handle/10810/1?locale-attribute=eu",
-  },
-  {
-    gradua: "informatika",
-    izenburua: "Adibidea 2",
-    link: "https://addi.ehu.es/handle/10810/2?locale-attribute=eu",
-  },
-  {
-    gradua: "adimen_artifiziala",
-    izenburua: "Adimen Artifiziala TFG",
-    link: "https://addi.ehu.es/handle/10810/3?locale-attribute=eu",
-  },
-  {
-    gradua: "telekomunikazioak",
-    izenburua: "Telekomunikazioak TFG",
-    link: "https://addi.ehu.es/handle/10810/4?locale-attribute=eu",
-  },
-  {
-    gradua: "informatika",
-    izenburua: "Adibidea 1",
-    link: "https://addi.ehu.es/handle/10810/1?locale-attribute=eu",
-  },
-  {
-    gradua: "informatika",
-    izenburua: "Adibidea 2",
-    link: "https://addi.ehu.es/handle/10810/2?locale-attribute=eu",
-  },
-  {
-    gradua: "adimen_artifiziala",
-    izenburua: "Adimen Artifiziala TFG",
-    link: "https://addi.ehu.es/handle/10810/3?locale-attribute=eu",
-  },
-  {
-    gradua: "telekomunikazioak",
-    izenburua: "Telekomunikazioak TFG",
-    link: "https://addi.ehu.es/handle/10810/4?locale-attribute=eu",
-  },
-  {
-    gradua: "informatika",
-    izenburua: "Adibidea 1",
-    link: "https://addi.ehu.es/handle/10810/1?locale-attribute=eu",
-  },
-  {
-    gradua: "informatika",
-    izenburua: "Adibidea 2",
-    link: "https://addi.ehu.es/handle/10810/2?locale-attribute=eu",
-  },
-  {
-    gradua: "adimen_artifiziala",
-    izenburua: "Adimen Artifiziala TFG",
-    link: "https://addi.ehu.es/handle/10810/3?locale-attribute=eu",
-  },
-  {
-    gradua: "telekomunikazioak",
-    izenburua: "Telekomunikazioak TFG",
-    link: "https://addi.ehu.es/handle/10810/4?locale-attribute=eu",
+    gradua: "Erizaintza",
+    izenburua: "Mindfulness y yoga para reducir los síntomas de la migraña",
+    egilea: "Gañan Zalabarria, Aroa",
+    link: "https://addi.ehu.es/handle/10810/74756",
   },
 ];
-
-function erakutsiLista(gradua) {
-  const aukeratutakoak = memoriak.filter((memoria) => memoria.gradua === gradua);
-  const container = document.getElementById("memoriakCarouselContainer");
-  if (aukeratutakoak.length === 0) {
-    container.innerHTML = "<p>Ez dago adibiderik.</p>";
-    return;
-  }
-  container.innerHTML = `
-    <div class="d-flex flex-row flex-nowrap overflow-auto gap-3 pb-3">
-      ${aukeratutakoak
-        .map(
-          (memoria) => `
-          <div class="card shadow rounded" style="min-width: 250px;">
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">${memoria.izenburua}</h5>
-              <a href="${memoria.link}" target="_blank" class="btn btn-primary mt-auto">Ikusi TFG</a>
-            </div>
-          </div>
-        `
-        )
-        .join("")}
-    </div>
-  `;
-}
-
-document
-  .getElementById("graduaSelect")
-  .addEventListener("change", function () {
-    erakutsiLista(this.value);
-  });
-
-erakutsiLista(document.getElementById("graduaSelect").value);
+window.memoriak = memoriak;

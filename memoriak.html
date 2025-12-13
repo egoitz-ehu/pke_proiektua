@@ -126,22 +126,17 @@
         </div>
       </div>
     </nav>
-    <h1>Memoriak</h1>
     <div class="container mt-5">
+      <h1>Memoriak</h1>
       <h3>Zer da ADDI? Eta zer aurkitu dezakegu bertan?</h3>
       <p>
-        EHU-k sorturiko webgune bat da, bertan EHU-ko komunitateko gradu
-        amaierako lan guztien memoriak aurki ditzakegu. Zure lana egin aurretik,
-        aurreko ikasleek egin dituzten lanak ikustea eta aztertzea baliagarria
-        gerta dakizuke. Horrela zure lana burutzeko lagungarria izan daiteken
-        informazioa lor dezakezu. ADDI webgunea berria suertatzen bazaizu,
-        honako informazioa irakurtzea lagungarria litzaizuke: hainbat iragazi
-        erabiliz egin dezakezu, esaterako, lanak argitalpen dataren arabera bila
-        ditzakezu. EHU-ko komunitatea azpikomunitatetan dago banatuta, hau da,
-        komunitateko GrAL guztien memoriak fakultateen arabera daude banatuta
-        eta baita espezialitateen arabera, holakorik balego. Adibidez,
-        Ingeniaritza Informatikoko graduko lanak eta Adimen Artifizialeko lanak
-        aurki ditzakegu informatika fakultateko azpikomunitatean.
+        ADDI EHU-k sortutako webgunea da, non gradu amaierako lan guztien
+        memoriak aurki daitezkeen. Zure lana egin aurretik, aurreko ikasleen
+        lanak kontsultatzea lagungarria izan daiteke. Bilaketa iragazki
+        ezberdinen bidez egin daiteke (adibidez, argitalpen dataz). Memoriak
+        fakultate eta espezialitatearen arabera daude antolatuta, hala nola
+        Ingeniaritza Informatika edo Adimen Artifiziala gradukoak informatika
+        fakultatean.
       </p>
     </div>
 
@@ -183,15 +178,13 @@
     </div>
 
     <div class="container mt-5">
-      <h3 class="mb-3">Aukeratu gradua:</h3>
+      <h3 class="mb-3">Beste urteeko adibideak. Aukeratu gradua:</h3>
       <select
         id="graduaSelect"
         class="form-select mb-4"
         style="max-width: 400px"
       >
-        <option value="informatika">Informatika</option>
-        <option value="adimen_artifiziala">Adimen Artifiziala</option>
-        <option value="telekomunikazioak">Telekomunikazioak</option>
+        <!-- Options will be populated dynamically -->
       </select>
 
       <div id="memoriakCarouselContainer"></div>
@@ -294,5 +287,71 @@
     ></script>
     <script src="js/theme.js"></script>
     <script src="js/memoriak.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const graduaSelect = document.getElementById("graduaSelect");
+        const memoriakContainer = document.getElementById(
+          "memoriakCarouselContainer"
+        );
+        if (!window.memoriak || !Array.isArray(memoriak)) return;
+        // Rellenar el select de grados
+        const graduaSet = new Set(memoriak.map((m) => m.gradua));
+        graduaSet.forEach((gradua) => {
+          const option = document.createElement("option");
+          option.value = gradua.toLowerCase().replace(/ /g, "_");
+          option.textContent = gradua;
+          graduaSelect.appendChild(option);
+        });
+
+        function mostrarMemoriakPorGradua(gradua) {
+          memoriakContainer.innerHTML = "";
+          const filtradas = memoriak.filter(
+            (m) => m.gradua.toLowerCase().replace(/ /g, "_") === gradua
+          );
+          if (filtradas.length === 0) {
+            memoriakContainer.innerHTML =
+              '<div class="alert alert-warning">Ez dago memoria aurkitu.</div>';
+            return;
+          }
+          const row = document.createElement("div");
+          row.className = "row g-4";
+          filtradas.forEach((m) => {
+            const col = document.createElement("div");
+            col.className = "col-12 col-md-6 col-lg-4";
+            // Imagen por grado
+            let img = "images/ehu.jpg";
+            if (m.gradua.toLowerCase().includes("informatika"))
+              img = "images/infor.jpg";
+            if (m.gradua.toLowerCase().includes("adimen"))
+              img = "images/infor.jpg";
+            if (m.gradua.toLowerCase().includes("erizaintza"))
+              img = "images/erizaintza.jpg";
+            col.innerHTML = `
+              <div class="card h-100 shadow-lg border-0 rounded-4 overflow-hidden">
+                <img src="${img}" class="card-img-top" alt="${m.gradua}" style="height: 180px; object-fit: cover; background: #f8f9fa;">
+                <div class="card-body d-flex flex-column p-4">
+                  <h5 class="card-title mb-2 text-primary"><i class="bi bi-journal-text me-2"></i>${m.izenburua}</h5>
+                  <p class="card-text mb-1"><span class="badge bg-secondary"><i class="bi bi-mortarboard"></i> ${m.gradua}</span></p>
+                  <p class="card-text mb-3"><i class="bi bi-person"></i> <strong>Egilea:</strong> ${m.egilea}</p>
+                  <a href="${m.link}" class="btn btn-outline-primary rounded-pill mt-auto fw-semibold" target="_blank">
+                    <i class="bi bi-box-arrow-up-right"></i> Ikusi memoria
+                  </a>
+                </div>
+              </div>
+            `;
+            row.appendChild(col);
+          });
+          memoriakContainer.appendChild(row);
+        }
+
+        if (graduaSelect.options.length > 0) {
+          mostrarMemoriakPorGradua(graduaSelect.options[0].value);
+        }
+
+        graduaSelect.addEventListener("change", function () {
+          mostrarMemoriakPorGradua(this.value);
+        });
+      });
+    </script>
   </body>
 </html>
