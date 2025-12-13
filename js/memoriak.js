@@ -13,9 +13,9 @@ const memoriak = [
   },
     {
     gradua: "Ingeniaritza Informatika",
-    izenburua: "Datu-baseen optimizazioa: kasu praktiko bat",
-    egilea: "Nerea Mendizabal",
-    link: "https://addi.ehu.es/handle/10810/67349",
+    izenburua: "Suizidio-ideiagintzaren identifikazioa sare sozialetan",
+    egilea: "Gracia Urzelai, Sara",
+    link: "https://addi.ehu.es/handle/10810/63221",
   },
   {
     gradua: "Adimen Artifiziala",
